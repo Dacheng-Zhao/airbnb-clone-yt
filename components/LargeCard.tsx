@@ -1,7 +1,14 @@
 import Image from 'next/image';
 
-function LargeCard({ img, title, description, buttonText }) {
-    console.log(img);
+interface LargeCard {
+    img: string;
+    title: string;
+    description: string;
+    buttonText: string;
+}
+
+function LargeCard({ img, title, description, buttonText }: LargeCard) {
+
     return (
         <section className='relative py-16 cursor-pointer'>
             <div className='relative h-96 min-w-[300px]'>

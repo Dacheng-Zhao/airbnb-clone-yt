@@ -7,7 +7,23 @@ import MediumCard from '../components/MediumCard'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
 
-const Home: NextPage = ({ exploreData, cardsData }) => {
+interface ExploreData {
+  img: string;
+  location: string;
+  distance: string;
+}
+
+interface CardsData {
+  img: string;
+  title: string;
+}
+
+interface HomeProps {
+  exploreData: ExploreData[];
+  cardsData: CardsData[];
+}
+
+const Home = ({ exploreData, cardsData }: HomeProps) => {
   console.log(exploreData);
   console.log(cardsData);
   return (
